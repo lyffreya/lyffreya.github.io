@@ -8,7 +8,8 @@ author_profile: true
 {% include base_path %}
 
 
-{% for post in site.projects %}
-  {% include archive-single.html %}
+{% assign ordered_projects = site.projects | sort: "order" %}
+{% for post in ordered_projects %}
+  {% include archive-single.html type="grid" disable_links=true show_dates=false %}
 {% endfor %}
 
