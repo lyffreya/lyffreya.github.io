@@ -1,6 +1,6 @@
 ---
 title: "Cat Moment"
-image: images/catmoment.jpg
+image: /images/catmoment.jpg
 order: 3
 ---
 

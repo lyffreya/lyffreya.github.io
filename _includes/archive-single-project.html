@@ -1,0 +1,95 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="project-item">
+  <div class="project-item__wrapper">
+    {% if post.image %}
+      <div class="project-item__image">
+        <img src="{{ post.image | relative_url }}" alt="{{ title }}">
+      </div>
+    {% endif %}
+    <div class="project-item__content">
+      <h2 class="project-item__title">{{ title }}</h2>
+      {% if post.excerpt %}
+        <div class="project-item__excerpt">{{ post.excerpt | markdownify }}</div>
+      {% elsif post.content %}
+        <div class="project-item__excerpt">{{ post.content | markdownify }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.project-item {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-item__wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.project-item__image {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.project-item__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-item__content {
+  flex: 1;
+}
+
+.project-item__title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.project-item__excerpt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.project-item__excerpt p {
+  margin-bottom: 0.5rem;
+}
+
+.project-item__excerpt p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .project-item__wrapper {
+    flex-direction: column;
+  }
+  
+  .project-item__image {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
+</style>
+

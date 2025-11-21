@@ -1,6 +1,6 @@
 ---
 title: "Multi-Module Reinforcement Learning from User Feedback"
-image: images/shutter.jpg
+image: /images/shutter.jpg
 order: 5
 ---
 

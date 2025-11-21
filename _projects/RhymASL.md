@@ -1,6 +1,6 @@
 ---
 title: "RhymASL: interactive rhyming ASL storytelling"
-image: images/RhymASL.png
+image: /images/RhymASL.png
 order: 2
 ---
 

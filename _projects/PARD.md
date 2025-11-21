@@ -1,6 +1,6 @@
 ---
 title: "PAR-D: Forecasting User Engagement with an Interactive Display"
-image: images/pard.png
+image: /images/pard.png
 order: 4
 ---
 
