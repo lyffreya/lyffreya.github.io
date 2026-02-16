@@ -11,4 +11,4 @@ I am a Ph.D. student at Rochester University's Computer Science Department, work
 
 **Research interest:** AI-mediated communication, Accessibility, AR/VR
 
-**Portfolio:** https://liyifananna.wixsite.com/portfolio
+**Portfolio:** [My portfolio](https://liyifananna.wixsite.com/portfolio)
